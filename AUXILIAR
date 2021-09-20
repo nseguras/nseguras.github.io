@@ -1,0 +1,41 @@
+ <a href="#">Este es un enlace</a>
+
+    <div >
+        <h2>Este es otro encabezado</h2>
+    </div>
+    
+    <h1>Títulos </h1>
+    <h5>Títulos 5 </h5>
+    <h6>Títulos 6 </h6>
+  
+    <p> Párrafo individual <br>
+    jejejeje</p>
+    <button><strong>Here </strong>Subscribe</button>
+    <button>Otro botón</button>
+    <p>
+      <strong>Negrita</strong><br>
+      <em>Cursiva</em>
+    </p>
+  
+    <img src="images/pacman.png">
+    <img src="https://img2.freepng.es/20190213/lab/kisspng-clip-art-goldfish-portable-network-graphics-vector-5c63ef31132526.6579967915500531690784.jpg"><br>
+  
+    <!--#Hipervinculos-->
+    #Hipervinculos <br>
+    <a href="https://www.google.com"> Google</a>
+    <br>
+    <input placeholder="Email" type="text"><br>
+    <input placeholder="Contraseña" type="password">
+    <input placeholder="Contraseña" type="range">
+    <input placeholder="Contraseña" type="checkbox">
+    <input placeholder="Contraseña" type="date">
+    <input placeholder="Contraseña" type="color">
+  
+    <ul>
+      <li><a href="https://www.google.com"> Google</a></li>
+      <li><a href="https://www.fb.com"> Fb</a></li>
+      <li><a href="https://www.wikipedia.com"> Wiki</a></li>
+      <li><a href="Cocteleria.html"> Otra pag</a></li>
+      <li><a href="Hobbies/probando.html"> Otra pag</a></li>
+    </ul>
+  

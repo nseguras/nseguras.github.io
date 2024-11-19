@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Pyodide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ejecuta código Python en tu navegador</h1>
+  <p>Haz clic en el botón para calcular la suma de dos números usando Python:</p>
+  <button onclick="ejecutarPython()">Calcular</button>
+  
+  <div class="output" id="resultado"></div>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+  <script>
+    // Función para cargar Pyodide y ejecutar código Python
+    async function ejecutarPython() {
+      // Cargar Pyodide
+      await loadPyodide();
+
+      // Código Python a ejecutar
+      const resultado = pyodide.runPython(`
+        num1 = 5
+        num2 = 10
+        resultado = num1 + num2
+        resultado
+      `);
+
+      // Mostrar el resultado en la página
+      document.getElementById("resultado").innerText = "El resultado de la suma es: " + resultado;
+    }
+  </script>
+  
+</body>
+</html>

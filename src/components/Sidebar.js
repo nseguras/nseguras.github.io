@@ -10,7 +10,9 @@ const Sidebar = () => {
       <Nav defaultActiveKey="/app1" className="flex-column">
         <Nav.Link as={Link} to="/app1">División servidor node.js</Nav.Link>
         <Nav.Link as={Link} to="/app2">Pyodide python en html</Nav.Link>
-        <Nav.Link as={Link} to="/app3">Aplicación 3</Nav.Link>
+        <Nav.Link as={Link} to="/app3">App 3</Nav.Link>
+        <Nav.Link as={Link} to="https://nseguras.github.io/diagrama-interaccion/"> Diagrama Interaccion</Nav.Link>
+        <Nav.Link as={Link} to="/app4">Two Js</Nav.Link>
       </Nav>
     </div>
   );

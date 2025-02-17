@@ -51,10 +51,7 @@ const FlexDesign = () => {
   return (
     <div className="container">
       <header>
-        <h1>FLUOR</h1>
-        <p>
-          CSA ToolBox - <i>FlexDesign</i>
-        </p>
+        <h1>Diseño flexión simple</h1>
       </header>
 
       <section id="form-section">

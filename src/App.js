@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom"; // React Router
-import CustomNavbar from "./components/CustomNavbar"; // Barra de navegación
+import CustomHeader from "./components/CustomHeader"; // CustomHeader
 import Sidebar from "./components/Sidebar"; // Barra lateral
 import FlexDesign from "./components/FlexDesign"; // Componente FlexDesign
 import App1 from "./components/App1"; // Componente App1
@@ -11,7 +11,7 @@ import Home from "./components/Home"; // Componente Home
 function App() {
   return (
     <>
-      <CustomNavbar /> {/* Barra de navegación */}
+      <CustomHeader /> {/* Bloque superior */}
       <div className="d-flex">
         <Sidebar /> {/* Barra lateral */}
         <div className="container-fluid">

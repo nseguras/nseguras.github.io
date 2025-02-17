@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const flexdesign = () => {
+const FlexDesign = () => {
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
 
@@ -35,4 +35,4 @@ const flexdesign = () => {
   );
 };
 
-export default flexdesign;
+export default FlexDesign;

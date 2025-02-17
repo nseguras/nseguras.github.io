@@ -73,7 +73,7 @@ const FlexDesign = () => {
 
           <div className="image-container">
             <img
-              src="./assets/flexdesign-fig.png"
+              src={require("./assets/flexdesign-fig.png")}
               alt="FlexDesign"
               className="flexdesign-image"
             />

@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom"; // React Router
 import CustomHeader from "./components/CustomHeader"; // CustomHeader
 import Sidebar from "./components/Sidebar"; // Barra lateral
-import FlexDesign from "./components/FlexDesign"; // Componente FlexDesign
+import FlexDesign from "./components/FlexDesign/FlexDesign"; // Componente FlexDesign
 import App1 from "./components/App1"; // Componente App1
 import App3 from "./components/App3"; // Componente App3
 import App4 from "./components/App4"; // Componente App4

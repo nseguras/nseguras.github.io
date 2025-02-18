@@ -8,11 +8,11 @@ const FlexDesign = () => {
     M_u: 9,
     h: 500,
     b: 400,
-    eps_u: 0.003,
-    Es: 200000,
-    fy: 420,
     fc: 30,
     rec: 50,
+    eps_u: 0.003, //Valor fijo
+    Es: 200000, //Valor fijo
+    fy: 420, //Valor fijo
   });
 
   const [results, setResults] = useState({
@@ -59,130 +59,6 @@ const FlexDesign = () => {
         <h2>Parámetros de Diseño</h2>
         <form id="flexionForm" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="M_u">Momento Último [tonf-m]:</label>
-            <input
-              type="number"
-              id="M_u"
-              name="M_u"
-              step="0.01"
-              value={formData.M_u}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="image-container">
-            <img
-              src={require("./assets/flexdesign-fig.png")}
-              alt="FlexDesign"
-              className="flexdesign-image"
-            />
-            <div className="input-group">
-              <div className="form-group">
-                <label htmlFor="h">Altura "h" de la sección [mm]:</label>
-                <input
-                  type="number"
-                  id="h"
-                  name="h"
-                  step="0.01"
-                  value={formData.h}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="b">Ancho "b" de la sección [mm]:</label>
-                <input
-                  type="number"
-                  id="b"
-                  name="b"
-                  step="0.01"
-                  value={formData.b}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="r">Radio "r" de la sección [mm]:</label>
-                <input
-                  type="number"
-                  id="r"
-                  name="r"
-                  step="0.01"
-                  value={formData.r}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="h">Altura "h" de la sección [mm]:</label>
-            <input
-              type="number"
-              id="h"
-              name="h"
-              step="0.01"
-              value={formData.h}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="b">Ancho "b" de la sección [mm]:</label>
-            <input
-              type="number"
-              id="b"
-              name="b"
-              step="0.01"
-              value={formData.b}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="eps_u">
-              Deformación última del hormigón ε<sub>u</sub>:
-            </label>
-            <input
-              type="number"
-              id="eps_u"
-              name="eps_u"
-              step="0.0001"
-              value={formData.eps_u}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="Es">Módulo de elasticidad del acero:</label>
-            <select
-              id="Es"
-              name="Es"
-              value={formData.Es}
-              onChange={handleChange}
-              required
-            >
-              <option value="200000">200.000 MPa</option>
-              <option value="210000">210.000 MPa</option>
-              <option value="220000">220.000 MPa</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="fy">Calidad del acero de refuerzo:</label>
-            <select
-              id="fy"
-              name="fy"
-              value={formData.fy}
-              onChange={handleChange}
-              required
-            >
-              <option value="280">A440-280H MPa</option>
-              <option value="420">A630-420H MPa</option>
-            </select>
-          </div>
-          <div className="form-group">
             <label htmlFor="fc">Grado del hormigón:</label>
             <select
               id="fc"
@@ -198,20 +74,70 @@ const FlexDesign = () => {
               <option value="40">G40</option>
             </select>
           </div>
-          <div className="form-group">
-            <label htmlFor="rec">
-              Recubrimiento al centro de la barra [mm]:
-            </label>
-            <input
-              type="number"
-              id="rec"
-              name="rec"
-              step="0.01"
-              value={formData.rec}
-              onChange={handleChange}
-              required
-            />
+
+          <div className="form-layout">
+            <div className="form-group">
+              <label htmlFor="M_u">Momento Último [tonf-m]:</label>
+              <input
+                type="number"
+                id="M_u"
+                name="M_u"
+                step="0.01"
+                value={formData.M_u}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="image-container">
+              <img
+                src={require("./assets/flexdesign-fig.png")}
+                alt="FlexDesign"
+                className="flexdesign-image"
+              />
+            </div>
+
+            <div className="input-group">
+              <div className="form-group">
+                <label htmlFor="h">Altura "h" [mm]:</label>
+                <input
+                  type="number"
+                  id="h"
+                  name="h"
+                  step="0.01"
+                  value={formData.h}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="rec">Recubrimiento "rec" [mm]:</label>
+                <input
+                  type="number"
+                  id="rec"
+                  name="rec"
+                  step="0.01"
+                  value={formData.rec}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="b">Ancho "b" [mm]:</label>
+              <input
+                type="number"
+                id="b"
+                name="b"
+                step="0.01"
+                value={formData.b}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
+
           <button type="submit">Calcular</button>
         </form>
       </section>

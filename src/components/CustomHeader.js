@@ -25,10 +25,10 @@ const titleStyles = {
 const CustomHeader = () => {
   return (
     <div style={headerStyles}>
-      <Link to="/Home">
+      <Link to="/">
         <img src={logo} alt="Logo" style={logoStyles} />
       </Link>
-      <Link to="/Home" style={titleStyles}>
+      <Link to="/" style={titleStyles}>
         CSAToolbox
       </Link>
     </div>

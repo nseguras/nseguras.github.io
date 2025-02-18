@@ -16,11 +16,11 @@ function App() {
         <Sidebar /> {/* Barra lateral */}
         <div className="container-fluid">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/flexdesign" element={<FlexDesign />} />
             <Route path="/app1" element={<App1 />} />
             <Route path="/app3" element={<App3 />} />
             <Route path="/app4" element={<App4 />} />
-            <Route path="/Home" element={<Home />} /> {/* Ruta por defecto */}
           </Routes>
         </div>
       </div>

@@ -10,7 +10,7 @@ import Home from "./components/Home"; // Componente Home
 
 function App() {
   return (
-    <>
+    <> 
       <CustomHeader /> {/* Bloque superior */}
       <div className="d-flex">
         <Sidebar /> {/* Barra lateral */}
